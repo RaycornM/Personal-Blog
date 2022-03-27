@@ -1,0 +1,23 @@
+.fabtita{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 楷体;
+    top: 27%;
+    left: 15%;
+}
+.pic{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 600px;
+    height: 280px;
+    left: 20%;
+    top: 63%;
+}

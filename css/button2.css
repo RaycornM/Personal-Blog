@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box; }
+
+a,
+button2 {
+  font-size: 12px; }
+
+a.button2 {
+  text-decoration: none; }
+
+button2.button2 {
+  border: none;
+  background-color: transparent;
+  font-family: "Suez One";
+  padding: 0;
+  cursor: pointer;
+  font-style: oblique; }
+  @media screen and (-ms-high-contrast: active) {
+    button2.button2 {
+      border: 2px solid currentcolor; } }
+
+a.button2,
+button2.button2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  position: absolute;
+  top: 1539px;
+  left: 46%;
+  background-color: black;
+  color: #fff;
+  border-radius: 1px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  padding: 0.2em 0.75em;
+  min-width: 150px;
+  min-height: 35px;
+  text-align: center;
+  line-height: 1.1;
+  transition: 220ms all ease-in-out; }
+  a.button2:hover, a.button2:active,
+  button2.button2:hover,
+  button2.button2:active {
+    background-color: black; }
+  a.button2:focus,
+  button2.button2:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 2px black; }
+  a.button2--small,
+  button2.button2--small {
+    font-size: 1.15rem; }
+  a.button2--block,
+  button2.button2--block {
+    width: 100%; }
+
+/*# sourceMappingURL=button2.css.map */

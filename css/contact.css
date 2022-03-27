@@ -1,0 +1,198 @@
+@-webkit-keyframes fadeIn {
+          0% {
+              opacity: 0; /*初始状态 透明度为0*/
+
+          }
+
+          50% {
+              opacity: 0; /*中间状态 透明度为0*/
+
+          }
+
+          100% {
+              opacity: 1; /*结尾状态 透明度为1*/
+
+          }
+
+      }
+
+main2 {
+    padding: 1rem;
+    max-width: 80ch;
+    height: 800px;
+    margin: 0 auto; }
+main2:focus {
+    outline: none; }
+
+.box4 {
+    position: absolute;
+    width: 1000px;
+    height: 882px;
+    background: white;
+    border: 1px solid #ccc;
+    top: 50%;
+    left: 27%;
+
+}
+
+    .consubn {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        padding-left: 30px;
+        padding: 0.5rem;
+        position: absolute;
+        background-color: white;
+        border: white 1px solid;
+        width: 500px;
+        border-radius: 1px;
+        border: 1px solid #576A7A;
+        top: 42%;
+        left: 25%;
+    }
+
+    .consube {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        padding-left: 30px;
+        padding: 0.5rem;
+        position: absolute;
+        background-color: white;
+        border: white 1px solid;
+        width: 500px;
+        border-radius: 1px;
+        border: 1px solid #576A7A;
+        top: 47.5%;
+        left: 25%;
+    }
+
+    .consubm {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        padding-left: 30px;
+        padding: 0.5rem;
+        position: absolute;
+        background-color: white;
+        border: white 1px solid;
+        width: 500px;
+        height: 200px;
+        border-radius: 1px;
+        border: 1px solid #576A7A;
+        top: 53%;
+        left: 25%;
+    }
+
+    * {
+        box-sizing: border-box; }
+
+    a,
+    button4 {
+        font-size: 15px; }
+
+    a.button4 {
+        text-decoration: none; }
+
+    button4.button4 {
+        border: 1px solid black;
+        font-family: "Suez One";
+        padding: 0;
+        cursor: pointer;
+        font-style: oblique; }
+    @media screen and (-ms-high-contrast: active) {
+        button4.button4 {
+            border: 1px solid black; } }
+
+    a.button4,
+    button4.button4 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: start;
+        position: absolute;
+        top: 79%;
+        left: 63.3%;
+        z-index: 1;
+        background-color: black;
+        color: white;
+        border-radius: 1px;
+        min-width: 12ch;
+        min-height: 40px;
+        text-align: center;
+        line-height: 1.1;
+        transition: 220ms all ease-in-out; }
+    a.button4:hover, a.button4:active,
+    button4.button4:hover,
+    button4.button4:active {
+        background-color: black; }
+    a.button4:focus,
+    button4.button4:focus {
+        outline-style: solid;
+        outline-color: white;
+        box-shadow: 0 0 0 2px black; }
+    a.button4--small,
+    button4.button4--small {
+        font-size: 13px; }
+
+.contit{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 仿宋;
+    top: 10%;
+    left: 41%;
+}
+
+.fcontitp{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 仿宋;
+    border-right: 1px solid silver;
+    top: 30%;
+    left: 17%;
+}
+
+.fcontita{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 仿宋;
+    border-right: 1px solid silver;
+    top: 30%;
+    left: 24%;
+}
+
+.fcontite{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 仿宋;
+    top: 30%;
+    left: 64%;
+}
+

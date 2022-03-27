@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日暮茶會|主頁</title>
+    <link rel="stylesheet" href="css/top.css" />
+    <link rel="stylesheet" href="css/button.css" />
+<!--    <link rel="stylesheet" href="css/button2.css" />-->
+</head>
+<body tabindex="-1">
+<nav aria-label="Main Navigation">
+    <a href="index.html" ><button class="button" type="button">NIGHTFALL TEAPARTY</button></a>
+    <div class="a"><img src="img/connect.png"></div>
+    <ul>
+        <li><a href="index.html">主頁</a></li>
+        <li class="dropdown">
+            <!-- aria-expanded needs managed with Javascript -->
+            <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="sweets-dropdown">
+                &nbsp;&nbsp;&nbsp;&nbsp;推文
+            </button>
+            <ul class="dropdown__menu" id="sweets-dropdown">
+                <li><a href="#">分享</a></li>
+                <li><a href="#">圖文</a></li>
+                <li><a href="#">創作</a></li>
+            </ul>
+        </li>
+        <li><a href="video.html">視頻</a></li>
+        <li><a href="about.html">關於</a></li>
+        <li><a href="album.html">相冊</a></li>
+        <li><a href="contact.html">聯係</a></li>
+    </ul>
+
+    <br />
+    <div class="space"></div>
+</nav>
+<div class="img">
+    <div class="tit">日 暮 茶 會</div>
+    <div class="tit2">NIGHTFALL  &nbsp; TEAPARTY</div>
+    <img width="2000" height="500" STYLE="z-index: 2" src="img/IMG_0073 (2).jpg">
+</div>
+<main>
+    <div class="box3">
+        <a href="dayawan.html" ><img src="img/DSCF0194.JPG" class="ph"></a>
+        <div class="newsbox"><img src="img/admin.png" class="admin">
+            <p class="biaoti">海邊藍天</p>
+            <p class="zhengwen">和朋友一起説走就走的海邊旅行</p>
+            <a href="javascript:;"  class="more">閲讀正文</a>
+            <div class="bord">
+                <br/><div></div><img src="img/LM.png">
+                <p class="like">&#10084;</p>
+            </div>
+            <img src="img/DSCF0343.JPG" class="ph2">
+            <div class="newsbox2"><img src="img/admin.png" class="admin">
+                <p class="biaoti2">校園風景</p>
+                <p class="zhengwen2">學校裏面的獨特美景</p>
+                <a href="javascript:;" class="more2">閲讀正文</a>
+                <div class="bord2">
+                    <br/><div></div><img src="img/LM.png">
+                    <p class="like2">&#10084;</p>
+                </div>
+            </div>
+                <img src="img/_DSC7500.jpg" class="ph3">
+                <div class="newsbox3"><img src="img/admin.png" class="admin">
+                    <p class="biaoti3">城市</p>
+                    <p class="zhengwen3">三水市區的風景</p>
+                    <a href="javascript:;" class="more3">閲讀正文</a>
+                    <div class="bord3">
+                        <br/><div></div><img src="img/LM.png">
+                        <p class="like3">&#10084;</p>
+                    </div>
+        </div>
+        <div><button3 class="button3" type="button">展開更多</button3></div>
+    </div>
+    </div>
+</main>
+
+<footer>
+    <p class="dingyuetit"><i>訂閲我們</i></p>
+    <input type="email" name="輸入你的郵箱*" required="" placeholder="輸入你的郵箱*" id="comp-jucjyt59input" value="" class="sub">
+    <div >
+        <a href="index.html" ><button2 class="button2" type="button">現在訂閲</button2></a>
+    </div>
+    <div class="subcon"><img src="img/connect.png"></div>
+    </br>
+    <p class="bs">&copy; 2021 by Nightfall Teaparty. Proudly created by RaycornM</p>
+</footer>
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".like").click(function () {
+                $(this).toggleClass('cs');
+            })
+        })
+    </script>
+    <script>
+        $(function () {
+            $(".like2").click(function () {
+                $(this).toggleClass('cs');
+            })
+        })
+    </script>
+    <script>
+        $(function () {
+            $(".like3").click(function () {
+                $(this).toggleClass('cs');
+            })
+        })
+    </script>
+</body>
+</html>

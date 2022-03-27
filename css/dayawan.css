@@ -1,0 +1,305 @@
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+
+    }
+
+    50% {
+        opacity: 0; /*中间状态 透明度为0*/
+
+    }
+
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+
+    }
+
+}
+
+* {
+    box-sizing: border-box; }
+
+.dropdown__title {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-family: "Kozuka Gothic Pro EL"; }
+
+nav {
+    background-color: white;
+    padding: 0;
+    position: relative;
+    top: 0;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    font-family: "Kozuka Gothic Pro EL";
+    z-index: 0; }
+nav > ul {
+    position: absolute;
+    grid-auto-flow: column; }
+nav > ul > li {
+    margin: 0 0.5rem; }
+nav > ul > li a,
+nav > ul > li .dropdown__title {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    font-size: 15px;
+    font-family: "Kozuka Gothic Pro EL"; }
+nav > ul > li a:focus,
+nav > ul > li .dropdown__title:focus {
+    outline: none; }
+nav > ul > li > a,
+nav > ul > li .dropdown__title {
+    padding: 1rem 0.5rem;
+    border-top: 3px solid transparent;
+    transition: 280ms all 120ms ease-out; }
+nav > ul > li > a:hover, nav > ul > li > a:focus,
+nav > ul > li .dropdown__title:hover,
+nav > ul > li .dropdown__title:focus {
+    border-top-color: black;
+    color: black; }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid; }
+nav ul li {
+    padding: 0; }
+
+.dropdown {
+    position: relative; }
+.dropdown .dropdown__title {
+    display: inline-flex;
+    align-items: center; }
+.dropdown .dropdown__title:after {
+    content: "";
+    border: 0.35rem solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.45);
+    margin-left: 0.25em;
+    transform: translateY(0.15em); }
+.dropdown .dropdown__menu {
+    position: absolute;
+    min-width: 15ch;
+    left: 50%;
+    top: calc(100% - 0.25rem);
+    transition: 280ms all 120ms ease-out;
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top center;
+    visibility: hidden;
+    opacity: 0.3;
+    padding: 0.5em 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.25);
+    z-index: 1; }
+.dropdown:after {
+    content: "";
+    border: 0.5rem solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: calc(100% - 1.25rem);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 280ms all 120ms ease-out;
+    opacity: 0;
+    will-change: opacity; }
+.dropdown:hover .dropdown__title, .dropdown:focus-within .dropdown__title {
+    border-top-color: wheat; }
+.dropdown:hover .dropdown__menu, .dropdown:focus-within .dropdown__menu {
+    opacity: 1;
+    transform: rotateX(0) translateX(-50%);
+    visibility: visible;
+    z-index: 1; }
+.dropdown:hover .dropdown__menu a, .dropdown:focus-within .dropdown__menu a {
+    opacity: 1; }
+.dropdown:hover:after, .dropdown:focus-within:after {
+    opacity: 1; }
+
+.box6{
+    width: 300px;
+    height: 1000px;
+    position: absolute;
+    left: 0%;
+    background: white;
+
+}
+.box6 .footbut{
+    position: fixed;
+    top:95%;
+    left: 5%;
+}
+.flike{
+    position: fixed;
+    top:92.5%;
+    left: 3.5%;
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+}
+.cs {
+    color: #f00; }
+
+.i1{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 330px;
+    height: 230px;
+    top: 8%;
+    left: 18%;
+}
+.i2{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 330px;
+    height: 230px;
+    top: 8%;
+    left: 37.5%;
+}
+.i3{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 460px;
+    height: 660px;
+    top: 8%;
+    left: 57%;
+}
+.i4{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 702px;
+    height: 420px;
+    top: 33%;
+    left: 18%;
+}
+.i6{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 450px;
+    height: 660px;
+    top: 78%;
+    left: 18%;
+}
+.i5{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 250px;
+    height: 460px;
+    top: 78%;
+    left: 43%;
+}
+.i7{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 460px;
+    height: 310px;
+    top: 78%;
+    left: 57%;
+}
+.i8{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 460px;
+    height: 310px;
+    top: 113%;
+    left: 57%;
+}
+.i9{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 250px;
+    height: 160px;
+    top: 129%;
+    left: 43%;
+}
+.i10{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 530px;
+    height: 300px;
+    top: 148%;
+    left: 18%;
+}
+.i11{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 530px;
+    height: 300px;
+    top: 180%;
+    left: 18%;
+}
+.i12{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 325px;
+    height: 610px;
+    top: 148%;
+    left: 46.5%;
+}
+.i13{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 325px;
+    height: 610px;
+    top: 148%;
+    left: 64.2%;
+}
+
+.foot{
+    position: absolute;
+    top: 216%;
+    left: 50%;
+    font-family: 仿宋;
+    text-align: center;
+    font-size: 15px;
+    z-index: 11;
+}
+.footpic{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 212%;
+    left: 50%;
+    z-index: 10;
+}

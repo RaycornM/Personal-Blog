@@ -1,0 +1,82 @@
+$btnColor: black;
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  font-size: 15px;
+}
+
+// Reset default link styles
+a.button {
+  text-decoration: none;
+}
+
+// Reset default button styles
+button.button {
+  border:1px solid black;
+
+  font-family: "Suez One";
+  padding: 0;
+  cursor: pointer;
+  font-style:oblique;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 1px solid black;
+  }
+}
+
+a.button,
+button.button {
+  // Display
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start; // Optional - see "Gotchas"
+  position: absolute;
+  top: 5.5%;
+  left: 5%;
+  z-index: 1;
+
+
+  // Visual
+  background-color: black;
+
+  color: white;
+  border-radius: 1px;
+  //box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+  // Size
+  //padding: 0.2em ;
+  min-width: 12ch;
+  min-height: 40px;
+
+  // Text
+  text-align: center;
+  line-height: 1.1;
+
+  transition: 220ms all ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: scale-color(black);
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: white;
+    box-shadow: 0 0 0 2px scale-color(black);
+  }
+
+  &--small {
+    font-size: 13px;
+  }
+
+  &--block {
+    //width: 100%;
+  }
+}
+
+

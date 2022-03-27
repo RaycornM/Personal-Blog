@@ -1,0 +1,774 @@
+$color: black;
+$color-dark: scale-color($color, $lightness: -30%);
+
+$transition: 280ms all 120ms ease-out;
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+
+  }
+
+  50% {
+    opacity: 0; /*中间状态 透明度为0*/
+
+  }
+
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dropdown__title {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  font-family: "Kozuka Gothic Pro EL";
+}
+
+nav {
+  background-color: $color;
+  padding: 0;
+  position: relative;
+  top: 0;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  font-family: "Kozuka Gothic Pro EL";
+  z-index: 2;
+
+  > ul {
+    position: absolute;
+    grid-auto-flow: column;
+
+    > li {
+      margin: 0 0.5rem;
+
+
+      a,
+      .dropdown__title {
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        color: #fff;
+        font-size: 15px;
+        font-family: "Kozuka Gothic Pro EL";
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      > a,
+      .dropdown__title {
+        padding: 1rem 0.5rem;
+        border-top: 3px solid transparent;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+          border-top-color: white;
+          color: white;
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+
+    li {
+      padding: 0;
+
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  .dropdown__title {
+    display: inline-flex;
+    align-items: center;
+
+    &:after {
+      content: "";
+      border: 0.35rem solid transparent;
+      border-top-color: rgba(#fff, 0.45);
+      margin-left: 0.25em;
+      transform: translateY(0.15em);
+    }
+  }
+
+  .dropdown__menu {
+    position: absolute;
+    min-width: 15ch;
+    left: 50%;
+    top: calc(100% - 0.25rem);
+    transition: $transition;
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top center;
+    visibility: hidden;
+    opacity: 0.3;
+    padding: 0.5em 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0.15em 0.25em rgba(black, 0.25);
+    z-index: 2;
+
+    a {
+      color: $color-dark;
+      display: block;
+      padding: 0.5em;
+      opacity: 0;
+      transition: $transition;
+      z-index: 1;
+
+      &:hover {
+        background-color: rgba($color, 0.15);
+      }
+
+      &:focus {
+        outline: none;
+        background-color: rgba($color, 0.25);
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    border: 0.5rem solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: calc(100% - 1.25rem);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: $transition;
+    opacity: 0;
+    will-change: opacity;
+  }
+
+  &:hover,
+  &:focus-within {
+    .dropdown__title {
+      border-top-color: wheat;
+    }
+
+    .dropdown__menu {
+      opacity: 1;
+      transform: rotateX(0) translateX(-50%);
+      visibility: visible;
+      z-index: 1;
+
+      a {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  font-family: "Baloo 2", sans-serif;
+  min-height: 120vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header,
+footer {
+  display: grid;
+  place-items: center;
+}
+
+.a {
+  position: absolute;
+  top: 7px;
+  left: 1700px;
+  z-index: 1;
+}
+
+.tit{
+  position: absolute;
+  color: white;
+  top: 15%;
+  left: 45.5%;
+  font-size: 55px;
+  font-family: 仿宋;
+  z-index: 1;
+}
+
+.tit2{
+  position: absolute;
+  color: white;
+  top: 23.5%;
+  left: 43%;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: "Times New Roman";
+  z-index: 1;
+}
+
+img{
+  display: table-cell;
+  vertical-align: bottom;
+  z-index: 6;
+}
+
+main {
+  padding: 1rem;
+  max-width: 80ch;
+  height: 2650px;
+  margin: 0 auto;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.box3 {
+  position: absolute;
+  width: 1000px;
+  height: 2733px;
+  background: white;
+  border: 1px solid #ccc;
+  top: 50%;
+  left: 27%;
+  z-index: 5;
+
+  .ph {
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    top: 3%;
+    left: 5%;
+  }
+
+  .newsbox {
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+    position: absolute;
+    background-color: white;
+    width: 900px;
+    height: 300px;
+    top: 21%;
+    left: 5%;
+    border: 1px solid #ccc;
+
+    .admin {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      position: absolute;
+      top: 5%;
+      left: 3%;
+      z-index: 5;
+    }
+
+    .biaoti {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      position: absolute;
+      top: 20%;
+      left: 6%;
+      font-size: 30px;
+      font-family: 仿宋;
+    }
+
+    .zhengwen {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      position: absolute;
+      top: 45%;
+      left: 6%;
+      font-size: 15px;
+      font-family: 仿宋;
+    }
+
+    .more {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      position: absolute;
+      top: 60%;
+      left: 6%;
+      font-size: 15px;
+      font-family: 仿宋;
+      color: silver;
+    }
+
+    .bord {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      width: 800px;
+      height: 50px;
+      border-top: 1px solid silver;
+      position: absolute;
+      top: 75%;
+      left: 5%;
+
+      .like {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        top: 4%;
+        left: 98%;
+        font-size: 18px;
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .cs {
+        color: #f00;
+      }
+    }
+
+    .ph2 {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      position: absolute;
+      width: 900px;
+      height: 500px;
+      top: 120%;
+      left: 0%;
+    }
+
+    .newsbox2 {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      position: absolute;
+      background-color: white;
+      width: 900px;
+      height: 300px;
+      top: 287%;
+      left: 0%;
+      border: 1px solid #ccc;
+
+      .admin2 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        z-index: 5;
+      }
+
+      .biaoti2 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        top: 20%;
+        left: 6%;
+        font-size: 30px;
+        font-family: 仿宋;
+      }
+
+      .zhengwen2 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        top: 45%;
+        left: 6%;
+        font-size: 15px;
+        font-family: 仿宋;
+      }
+
+      .more2 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        top: 60%;
+        left: 6%;
+        font-size: 15px;
+        font-family: 仿宋;
+        color: silver;
+      }
+
+      .bord2 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        width: 800px;
+        height: 50px;
+        border-top: 1px solid silver;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+
+        .like2 {
+          -webkit-animation-name: fadeIn; /*动画名称*/
+          -webkit-animation-duration: 2s; /*动画持续时间*/
+          -webkit-animation-iteration-count: 1; /*动画次数*/
+          -webkit-animation-delay: 0s; /*延迟时间*/
+          position: absolute;
+          top: 4%;
+          left: 98%;
+          font-size: 18px;
+          color: #ccc;
+          cursor: pointer;
+        }
+
+        .cs {
+          color: #f00;
+        }
+      }
+    }
+
+      .ph3 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        width: 900px;
+        height: 500px;
+        top: 410%;
+        left: 0%;
+      }
+
+      .newsbox3 {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 2s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+        position: absolute;
+        background-color: white;
+        width: 900px;
+        height: 300px;
+        top: 575%;
+        left: 0%;
+        border: 1px solid #ccc;
+
+        .admin3 {
+          -webkit-animation-name: fadeIn; /*动画名称*/
+          -webkit-animation-duration: 2s; /*动画持续时间*/
+          -webkit-animation-iteration-count: 1; /*动画次数*/
+          -webkit-animation-delay: 0s; /*延迟时间*/
+          position: absolute;
+          top: 5%;
+          left: 3%;
+          z-index: 5;
+        }
+
+        .biaoti3 {
+          -webkit-animation-name: fadeIn; /*动画名称*/
+          -webkit-animation-duration: 2s; /*动画持续时间*/
+          -webkit-animation-iteration-count: 1; /*动画次数*/
+          -webkit-animation-delay: 0s; /*延迟时间*/
+          position: absolute;
+          top: 20%;
+          left: 6%;
+          font-size: 30px;
+          font-family: 仿宋;
+        }
+
+        .zhengwen3 {
+          -webkit-animation-name: fadeIn; /*动画名称*/
+          -webkit-animation-duration: 2s; /*动画持续时间*/
+          -webkit-animation-iteration-count: 1; /*动画次数*/
+          -webkit-animation-delay: 0s; /*延迟时间*/
+          position: absolute;
+          top: 45%;
+          left: 6%;
+          font-size: 15px;
+          font-family: 仿宋;
+        }
+
+        .more3 {
+          -webkit-animation-name: fadeIn; /*动画名称*/
+          -webkit-animation-duration: 2s; /*动画持续时间*/
+          -webkit-animation-iteration-count: 1; /*动画次数*/
+          -webkit-animation-delay: 0s; /*延迟时间*/
+          position: absolute;
+          top: 60%;
+          left: 6%;
+          font-size: 15px;
+          font-family: 华文仿宋;
+          color: silver;
+        }
+
+        .bord3 {
+          -webkit-animation-name: fadeIn; /*动画名称*/
+          -webkit-animation-duration: 2s; /*动画持续时间*/
+          -webkit-animation-iteration-count: 1; /*动画次数*/
+          -webkit-animation-delay: 0s; /*延迟时间*/
+          width: 800px;
+          height: 50px;
+          border-top: 1px solid silver;
+          position: absolute;
+          top: 75%;
+          left: 5%;
+
+          .like3 {
+            -webkit-animation-name: fadeIn; /*动画名称*/
+            -webkit-animation-duration: 2s; /*动画持续时间*/
+            -webkit-animation-iteration-count: 1; /*动画次数*/
+            -webkit-animation-delay: 0s; /*延迟时间*/
+            position: absolute;
+            top: 4%;
+            left: 98%;
+            font-size: 18px;
+            color: #ccc;
+            cursor: pointer;
+          }
+
+          .cs {
+            color: #f00;
+          }
+        }
+      }
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    a,
+    button3 {
+      font-size: 12px;
+    }
+
+    a.button3 {
+      text-decoration: none;
+    }
+
+    button3.button3 {
+      border: none;
+      background-color: transparent;
+      font-family: "Suez One";
+      padding: 0;
+      cursor: pointer;
+      font-style: oblique;
+    }
+
+    @media screen and (-ms-high-contrast: active) {
+      button3.button3 {
+        border: 2px solid currentcolor;
+      }
+    }
+
+    a.button3,
+    button3.button3 {
+      -webkit-animation-name: fadeIn; /*动画名称*/
+      -webkit-animation-duration: 2s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: 0s; /*延迟时间*/
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: start;
+      position: relative;
+      top: 2065px;
+      left: 43%;
+      background-color: white;
+      color: black;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.2em 0.75em;
+      min-width: 150px;
+      min-height: 35px;
+      text-align: center;
+      line-height: 1.1;
+      transition: 220ms all ease-in-out;
+    }
+
+    a.button3:hover, a.button3:active,
+    button3.button3:hover,
+    button3.button3:active {
+      background-color: white;
+    }
+
+    a.button3:focus,
+    button3.button3:focus {
+      outline-style: solid;
+      outline-color: transparent;
+      box-shadow: 0 0 0 2px white;
+    }
+
+    a.button3--small,
+    button3.button3--small {
+      font-size: 1.15rem;
+    }
+
+    a.button3--block,
+    button3.button3--block {
+      width: 100%;
+    }
+  }
+
+
+  footer {
+    background-color: white;
+    font-family: Playfair Display;
+    font-size: 13px;
+    border-top: 2px solid #576A7A;
+    height: 200px;
+
+    .dingyuetit {
+      position: relative;
+      top: 45%;
+      left: -20%;
+      color: black;
+      font-size: 18px;
+      font-family: 宋体;
+    }
+
+    .bs {
+      position: relative;
+      top: -240%;
+      left: 15%;
+    }
+
+    .subcon {
+      position: relative;
+      top: -240%;
+      left: 11%;
+      z-index: 1;
+    }
+
+    .email {
+      position: absolute;
+      top: 108%;
+      left: 51.5%;
+      width: 30px;
+      height: 20px;
+      z-index: 1;
+    }
+
+    .sub {
+
+      padding-left: 30px;
+      padding: 0.5rem;
+      position: relative;
+      background-color: white;
+      border: white 1px solid;
+      width: 300px;
+      border-radius: 1px;
+      border: 1px solid #576A7A;
+      top: 60%;
+      left: -14.5%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    a,
+    button2 {
+      font-size: 12px;
+    }
+
+    a.button2 {
+      text-decoration: none;
+    }
+
+    button2.button2 {
+      border: none;
+      background-color: transparent;
+      font-family: "Suez One";
+      padding: 0;
+      cursor: pointer;
+      font-style: oblique;
+    }
+
+    @media screen and (-ms-high-contrast: active) {
+      button2.button2 {
+        border: 2px solid currentcolor;
+      }
+    }
+
+    a.button2,
+    button2.button2 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: start;
+      position: relative;
+      top: -14px;
+      left: -40%;
+      background-color: black;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.2em 0.75em;
+      min-width: 150px;
+      min-height: 35px;
+      text-align: center;
+      line-height: 1.1;
+      transition: 220ms all ease-in-out;
+    }
+
+    a.button2:hover, a.button2:active,
+    button2.button2:hover,
+    button2.button2:active {
+      background-color: black;
+    }
+
+    a.button2:focus,
+    button2.button2:focus {
+      outline-style: solid;
+      outline-color: transparent;
+      box-shadow: 0 0 0 2px black;
+    }
+
+    a.button2--small,
+    button2.button2--small {
+      font-size: 1.15rem;
+    }
+
+    a.button2--block,
+    button2.button2--block {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
+  }
